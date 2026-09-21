@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Numbers</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .calculator {
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #999;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 30px;
+            margin-top: 10px;
+            font-size: 16px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkblue;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h1>Add Numbers</h1>
+
+        <input type="number" id="number1" placeholder="Enter first number">
+
+        <input type="number" id="number2" placeholder="Enter second number">
+
+        <br>
+
+        <button id="addButton">ADD</button>
+
+        <div id="result">Result: 0</div>
+
+    </div>
+
+
+    <script>
+
+        // Get the button
+        const addButton = document.getElementById("addButton");
+
+        // Run this when the ADD button is clicked
+        addButton.addEventListener("click", function () {
+
+            // Get the numbers from input boxes
+            const number1 = Number(document.getElementById("number1").value);
+            const number2 = Number(document.getElementById("number2").value);
+
+            // Add the numbers
+            const total = number1 + number2;
+
+            // Display the result
+            document.getElementById("result").textContent =
+                "Result: " + total;
+        });
+
+    </script>
+
+</body>
+
+</html>
